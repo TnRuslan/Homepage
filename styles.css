@@ -90,9 +90,11 @@ body {
 }
 
 .contact-info__block {
+    width: calc((100% - 40px) / 3);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .contact-info__block--center {
@@ -230,7 +232,12 @@ body {
 }
 
 .additional-info__education {
+    position: relative;
     margin-bottom: 20px;
+}
+
+.additional-info__education:hover .additional-info__education-cat {
+    opacity: 1;
 }
 
 .additional-info__education-header {
@@ -254,6 +261,17 @@ body {
 
 .additional-info__education-university-name {
     color: var(--secondary-text-color);
+}
+
+.additional-info__education-cat {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 90px;
+    border-radius: 16px;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .additional-info__languages {
